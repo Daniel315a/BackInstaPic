@@ -10,19 +10,5 @@ export class UsersController {
   save(@Body() userDto: UserDto) {
     return this.usersService.save(userDto);
   }
-
-  @Get()
-  findAll() {
-    return this.usersService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.usersService.findOne(+id);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.usersService.remove(+id);
-  }
+  
 }

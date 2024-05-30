@@ -7,7 +7,6 @@ import {
     IsDateString,
   } from 'class-validator';
   
-
 export class UserDto {
 
     id: number = 0;
