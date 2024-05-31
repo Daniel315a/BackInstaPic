@@ -10,5 +10,10 @@ export class UsersController {
   save(@Body() userDto: UserDto) {
     return this.usersService.save(userDto);
   }
-  
+ 
+  @Get(':auth0Id')
+  getByAuth0Id(@Param('auth0Id') auth0Id: string) {
+    return this.usersService.getByAuth0Id(auth0Id);
+  }
+
 }
